@@ -30,13 +30,26 @@ public class Main {
                 int plot = Sc.nextInt();
                 Plots.plantCrop(plot);
 
-                // Prints out the planted plots
-                for (long[] rows : Plots.plots) {
-                    for (long cols : rows) {
-                        System.out.print(cols + ",");
+                Plots.checkCrops();
+            } else if (userinput.equalsIgnoreCase("check")) {
+                // Checks on the crops time left
+                Plots.checkCrops();
+            } else if (userinput.equalsIgnoreCase("harvest")) {
+                // Prints out the plots and asks which plot to plant in
+                System.out.println( "Which plot would you like to harvest?" );
+                for (int[] rows : Plots.displayPlots) {
+                    for (int cols : rows) {
+                        System.out.print(cols);
                     }
                     System.out.print("\n");
                 }
+                // Gets input for the plot plant in
+                int plot = Sc.nextInt();
+                Plots.harvest(plot);
+
+                Plots.checkCrops();
+
+                System.out.println("You have " + Inventory.getHarvestedCrops() + " harvested crops.");
             }
 
         }

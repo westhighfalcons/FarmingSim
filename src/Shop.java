@@ -48,7 +48,7 @@ public class Shop {
 
 
             if (userinput.toLowerCase().equals("plots")) {
-                System.out.print("How many plots would you like to buy? Each plot is 50 each.");
+                System.out.print("Which plot would you like to buy? (One-Nine) would you like to buy? Each plot is 50 each.");
                 userinput = Sc.nextLine();
             }
             if (userinput.toLowerCase().equals("one") && Inventory.getWallet() > 50) {
@@ -56,28 +56,28 @@ public class Shop {
                 Inventory.setWallet(Inventory.getWallet() - plot);
             } else if (userinput.toLowerCase().equals("two") && Inventory.getWallet() > 100) {
                 System.out.println("You have successfully bought 2 plots");
-                Inventory.setWallet(Inventory.getWallet() - (plot * 2));
+                Inventory.setWallet(Inventory.getWallet() - (plot));
             } else if (userinput.toLowerCase().equals("three") && Inventory.getWallet() > 150) {
                 System.out.println("You have successfully bought 3 plots");
-                Inventory.setWallet(Inventory.getWallet() - (plot * 3));
+                Inventory.setWallet(Inventory.getWallet() - (plot));
             } else if (userinput.toLowerCase().equals("four") && Inventory.getWallet() > 200) {
                 System.out.println("You have successfully bought 4 plots");
-                Inventory.setWallet(Inventory.getWallet() - (plot * 4));
+                Inventory.setWallet(Inventory.getWallet() - (plot));
             } else if (userinput.toLowerCase().equals("five") && Inventory.getWallet() > 250) {
                 System.out.println("You have successfully bought 5 plots");
-                Inventory.setWallet(Inventory.getWallet() - (plot * 5));
+                Inventory.setWallet(Inventory.getWallet() - (plot));
             } else if (userinput.toLowerCase().equals("six") && Inventory.getWallet() > 300) {
                 System.out.println("You have successfully bought 6 plots");
-                Inventory.setWallet(Inventory.getWallet() - (plot * 6));
+                Inventory.setWallet(Inventory.getWallet() - (plot));
             } else if (userinput.toLowerCase().equals("seven") && Inventory.getWallet() > 350) {
                 System.out.println("You have successfully bought 7 plots");
-                Inventory.setWallet(Inventory.getWallet() - (plot * 7));
+                Inventory.setWallet(Inventory.getWallet() - (plot));
             } else if (userinput.toLowerCase().equals("eight") && Inventory.getWallet() > 400) {
                 System.out.println("You have successfully bought 8 plots");
-                Inventory.setWallet(Inventory.getWallet() - (plot * 8));
+                Inventory.setWallet(Inventory.getWallet() - (plot));
             } else if (userinput.toLowerCase().equals("nine") && Inventory.getWallet() > 450) {
                 System.out.println("You have successfully bought 9 plots");
-                Inventory.setWallet(Inventory.getWallet() - (plot * 9));
+                Inventory.setWallet(Inventory.getWallet() - (plot));
             } else if (userinput.toLowerCase().equals("one") && Inventory.getWallet() < 50) {
                 System.out.println("You cannot afford 1 plot!");
             } else if (userinput.toLowerCase().equals("two") && Inventory.getWallet() < 100) {
