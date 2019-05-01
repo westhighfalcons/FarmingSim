@@ -94,7 +94,6 @@ public class Shop {
                 System.out.println("You cannot afford 7 plots!");
             } else if (userinput.toLowerCase().equals("eight") && Inventory.getWallet() < 400) {
                 System.out.println("You cannot afford 8 plots!");
-                // killme
             } else if (userinput.toLowerCase().equals("nine") && Inventory.getWallet() < 450) {
                 System.out.println("You cannot afford 9 plots!");
             }

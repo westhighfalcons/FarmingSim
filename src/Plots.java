@@ -24,6 +24,7 @@ public class Plots {
     }
 
     static void plantCrop(int plotToPlantOn){
+
         plots[getX(plotToPlantOn)][getY(plotToPlantOn)] = setTime(30);
     }
 
