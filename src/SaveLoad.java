@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.io.*;
 
 public class SaveLoad {
+    public static void ResetSave(){}
     public static void Load(){
 
         // The name of the file to open.
