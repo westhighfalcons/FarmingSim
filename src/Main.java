@@ -27,6 +27,7 @@ public class Main {
                 System.out.println( "To check if your crops are done: *check*" );
                 System.out.println( "To harvest your crops: *harvest*" );
                 System.out.println( "To save your data: *save*" );
+                System.out.println( "To reset your save data: *reset*" );
 
             } else if (userinput.toLowerCase().equals( "shop" )) {
                 Shop tpShop = new Shop();
@@ -55,7 +56,13 @@ public class Main {
             } else if (userinput.equalsIgnoreCase("check")) {
                 // Checks on the crops time left
                 Plots.checkCrops();
-            } else if (userinput.equalsIgnoreCase("harvest")) {
+            }
+            else if(userinput.equalsIgnoreCase( "reset" )){
+
+                SaveLoad.ResetSave();
+
+            }
+            else if (userinput.equalsIgnoreCase("harvest")) {
                 // Prints out the plots and asks which plot to plant in
                 System.out.println( "Which plot would you like to harvest?" );
                 for (int[] rows : Plots.displayPlots) {

@@ -5,7 +5,24 @@ import java.util.Scanner;
 import java.io.*;
 
 public class SaveLoad {
-    public static void ResetSave(){}
+    public static void ResetSave(){
+
+        try {
+            PrintWriter write = new PrintWriter( "saveData.txt", StandardCharsets.UTF_8 );
+            write.println();
+            write.println();
+            write.println();
+            write.println();
+            write.println();
+            write.println();
+            write.close();
+            System.out.println( "You have reset the game." );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
     public static void Load(){
 
         // The name of the file to open.
