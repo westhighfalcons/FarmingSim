@@ -1,13 +1,23 @@
 import java.util.Scanner;
 public class Main {
+    public static String name;
+
 
     public static void main(String[] args) {
+            SaveLoad.Load();
         boolean gameState = true;
 
         String userinput;
         Scanner Sc = new Scanner( System.in );
         System.out.println( "Welcome to our farming game" );
         System.out.println( "To get a list of commands, type *commands*" );
+        if(name == null){
+            System.out.println( "Enter your name: " );
+            name = Sc.nextLine();
+        }
+        else
+            System.out.println( "Welcome back " + name );
+
         while (gameState) {
             userinput = Sc.nextLine();
             if (userinput.equalsIgnoreCase("commands")) {
@@ -16,6 +26,8 @@ public class Main {
                 System.out.println( "To sell stuff at the market:  *market*" );
                 System.out.println( "To check if your crops are done: *check*" );
                 System.out.println( "To harvest your crops: *harvest*" );
+                System.out.println( "To save your data: *save*" );
+
             } else if (userinput.toLowerCase().equals( "shop" )) {
                 Shop tpShop = new Shop();
                 tpShop.tpShop();
@@ -59,8 +71,12 @@ public class Main {
                 Plots.checkCrops();
 
                 System.out.println("You have " + Inventory.getHarvestedCrops() + " harvested crops.");
+            } else if (userinput.equalsIgnoreCase( "save" )) {
+
+                SaveLoad.Save();
+
+            }
             }
 
         }
     }
-}
