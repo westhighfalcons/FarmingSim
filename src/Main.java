@@ -3,7 +3,7 @@ public class Main {
 
     public static void main(String[] args) {
         boolean gameState = true;
-        boolean firstTime = true;
+
         String userinput;
         Scanner Sc = new Scanner( System.in );
         System.out.println( "Welcome to our farming game" );
