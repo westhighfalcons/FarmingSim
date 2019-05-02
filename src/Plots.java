@@ -24,8 +24,25 @@ public class Plots {
     }
 
     static void plantCrop(int plotToPlantOn){
+        if(Inventory.lTractor){
 
-        plots[getX(plotToPlantOn)][getY(plotToPlantOn)] = setTime(30);
+            plots[getX(plotToPlantOn)][getY(plotToPlantOn)] = setTime(25);
+        }
+        else if(Inventory.bTractor){
+
+            plots[getX(plotToPlantOn)][getY(plotToPlantOn)] = setTime(30);
+        }
+        else if(Inventory.mTractor){
+
+            plots[getX(plotToPlantOn)][getY(plotToPlantOn)] = setTime(45);
+        }
+        else if(Inventory.sTractor){
+            plots[getX(plotToPlantOn)][getY(plotToPlantOn)] = setTime(60);
+        }
+
+        else
+            System.out.println( "You do not have any tractors to plant with!!" );
+
     }
 
     private static int getX(int input) {

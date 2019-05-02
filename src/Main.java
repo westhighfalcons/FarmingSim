@@ -7,16 +7,25 @@ public class Main {
         String userinput;
         Scanner Sc = new Scanner( System.in );
         System.out.println( "Welcome to our farming game" );
+        System.out.println( "To get a list of commands, type *commands*" );
         while (gameState) {
             userinput = Sc.nextLine();
-            if (userinput.equalsIgnoreCase("help") || firstTime) {
-                System.out.println( "To buy your first tractor and plot of land type Shop" );
-                System.out.println( "To plant your crops type plant" );
-                firstTime = false;
+            if (userinput.equalsIgnoreCase("commands")) {
+                System.out.println( "To buy your first tractor: *shop*" );
+                System.out.println( "To plant your crops: *plant*" );
+                System.out.println( "To sell stuff at the market:  *market*" );
+                System.out.println( "To check if your crops are done: *check*" );
+                System.out.println( "To harvest your crops: *harvest*" );
             } else if (userinput.toLowerCase().equals( "shop" )) {
                 Shop tpShop = new Shop();
                 tpShop.tpShop();
-            } else if (userinput.equalsIgnoreCase("plant")) {
+            }
+            else   if (userinput.toLowerCase().equals("market")) {
+                Selling market = new Selling();
+                market.market();
+            }
+
+            else if (userinput.equalsIgnoreCase("plant")) {
                 // Do planting stuff
                 // Prints out the plots and asks which plot to plant in
                 System.out.println( "Which plot would you like to plant in?" );
