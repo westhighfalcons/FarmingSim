@@ -1,10 +1,10 @@
 public class Inventory {
     public static int harvestedCrops = 0;
     private static int wallet = 100;
-    public static boolean bTractor;
-    public static boolean sTractor;
-    public static boolean mTractor;
-    public static boolean lTractor;
+    public static boolean bTractor = false;
+    public static boolean sTractor = false;
+    public static boolean mTractor = false;
+    public static boolean lTractor = false;
 
     public Inventory(int w) {
        wallet = w;

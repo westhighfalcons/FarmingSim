@@ -27,7 +27,14 @@ public class SaveLoad {
             Inventory.setWallet( Integer.parseInt( line ) );
             line = bufferedReader.readLine();
             Main.name = line;
-
+            line = bufferedReader.readLine();
+            Inventory.lTractor = Boolean.parseBoolean( line );
+            line = bufferedReader.readLine();
+            Inventory.bTractor = Boolean.parseBoolean( line );
+            line = bufferedReader.readLine();
+            Inventory.mTractor = Boolean.parseBoolean( line );
+            line = bufferedReader.readLine();
+            Inventory.sTractor = Boolean.parseBoolean( line );
             // Always close files.
             bufferedReader.close();
         }
@@ -53,6 +60,10 @@ public class SaveLoad {
             PrintWriter write = new PrintWriter( "saveData.txt", StandardCharsets.UTF_8 );
             write.println( Inventory.getWallet() );
             write.println( Main.name );
+            write.println( Inventory.lTractor );
+            write.println( Inventory.bTractor );
+            write.println( Inventory.mTractor );
+            write.println( Inventory.sTractor );
             write.close();
             System.out.println( "You have saved your game." );
         } catch (IOException e) {
