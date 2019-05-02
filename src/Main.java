@@ -11,7 +11,7 @@ public class Main {
         Scanner Sc = new Scanner( System.in );
         System.out.println( "Welcome to our farming game" );
         System.out.println( "To get a list of commands, type *commands*" );
-        if(name == null){
+        if(name.equals( "new" )){
             System.out.println( "Enter your name: " );
             name = Sc.nextLine();
         }

@@ -9,12 +9,12 @@ public class SaveLoad {
 
         try {
             PrintWriter write = new PrintWriter( "saveData.txt", StandardCharsets.UTF_8 );
-            write.println();
-            write.println();
-            write.println();
-            write.println();
-            write.println();
-            write.println();
+            write.println("100");
+            write.println( "new");
+            write.println( "false" );
+            write.println( "false" );
+            write.println( "false" );
+            write.println( "false" );
             write.close();
             System.out.println( "You have reset the game." );
         } catch (IOException e) {
@@ -42,7 +42,13 @@ public class SaveLoad {
                     new BufferedReader(fileReader);
 
             line = bufferedReader.readLine();
-            Inventory.setWallet( Integer.parseInt( line ) );
+
+            if (line == null) {
+                Save();
+                return;
+            }
+
+            Inventory.setWallet( Integer.parseInt(line));
             line = bufferedReader.readLine();
             Main.name = line;
             line = bufferedReader.readLine();
