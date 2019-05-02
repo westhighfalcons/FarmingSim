@@ -1,2 +1,6 @@
-50
+0
 michael
+false
+false
+false
+true
