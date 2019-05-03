@@ -14,10 +14,11 @@ public class Main {
         if(name.equals( "new" )){
             System.out.println( "Enter your name: " );
             name = Sc.nextLine();
+            System.out.println( "Type commands to get started" );
         }
         else
             System.out.println( "Welcome back " + name );
-
+            System.out.println( "Type commands to get started" );
         while (gameState) {
             userinput = Sc.nextLine();
             if (userinput.equalsIgnoreCase("commands")) {

@@ -7,15 +7,29 @@ public class Selling {
     }
 
     public static void  market(){
-        System.out.println( "Welcome to the market, what would you like to sell?" );
-        Scanner input = new Scanner( System.in );
-        String userInput = input.nextLine();
-        if(userInput.toLowerCase().equals( "crops" )){
+
+        System.out.println( "How many crops would you like to sell?" );
+
+
             System.out.println( "You have " + Inventory.getHarvestedCrops() + " crops. " );
-            System.out.println( "How much would you like to sell?" );
-            Inventory.setWallet(Inventory.getWallet() + (input.nextInt() * 25));
-            System.out.println( "Your balance is now " + Inventory.getWallet() );
-        }
+
+            Scanner input = new Scanner( System.in );
+            String userInput = input.nextLine();
+            if (Integer.parseInt( userInput ) <= Inventory.getHarvestedCrops()) {
+                Inventory.setWallet( Inventory.getWallet() + (Integer.parseInt( userInput ) * 25) );
+                System.out.println( "Your balance is now " + Inventory.getWallet() );
+            }
+            else
+            {System.out.println( "You dont have that many crops!" );}
+
+            System.out.println( "Would you like to keep selling crops?" );
+            userInput = input.nextLine();
+            if(userInput.equalsIgnoreCase( "no" ))
+                System.out.println( "Exiting to main menu" );
+            else
+                market();
+
+
 
 
     }

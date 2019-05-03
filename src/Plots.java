@@ -2,17 +2,10 @@ import java.util.Scanner;
 import java.util.Timer;
 
 public class Plots {
-    private boolean plotFilled;
-    public double cropTime;
-    public static void Remainder(int seconds){
 
 
-    }
 
 
-    public void setPlotStatus(boolean  b){
-        plotFilled = b;
-    }
     public static long[][] plots = new long[3][3];
     public static int[][] displayPlots = {
             {1,2,3},
@@ -69,7 +62,7 @@ public class Plots {
         for (long[] rows : Plots.plots) {
             for (long cols : rows) {
                 if ((cols - (System.currentTimeMillis()/1000)) > 0)
-                    System.out.print((cols - (System.currentTimeMillis()/1000)) + " seconds,");
+                    System.out.print((cols  - (System.currentTimeMillis()/1000)) + " seconds,");
                 else
                     System.out.print(0 + " seconds,");
             }
