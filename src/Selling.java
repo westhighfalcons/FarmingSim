@@ -10,7 +10,7 @@ public class Selling {
 
         System.out.println( "How many crops would you like to sell?" );
 
-
+            //allows user to sell the crops they have for money to buy a bigger tractor for quicker harvest times.
             System.out.println( "You have " + Inventory.getHarvestedCrops() + " crops. " );
 
             Scanner input = new Scanner( System.in );

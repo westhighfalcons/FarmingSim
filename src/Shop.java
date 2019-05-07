@@ -19,7 +19,7 @@ public class Shop {
             System.out.println("Would you like to buy a tractor? (Yes / No)");
             userinput = Sc.nextLine();
 
-
+                // when they player buys a tractor, it sets its boolean to true, telling the game they bought the tractor.
             if (userinput.toLowerCase().equals("yes")) {
                 System.out.println("The selection of tractors are: Small(50), Medium(100), Big(150), or Large(200)");
                 userinput = Sc.nextLine();

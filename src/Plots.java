@@ -5,7 +5,7 @@ public class Plots {
 
 
 
-
+    // creates and displays the plots
     public static long[][] plots = new long[3][3];
     public static int[][] displayPlots = {
             {1,2,3},
@@ -15,7 +15,7 @@ public class Plots {
     public static void setPlots(int i, int b){
         plots[i][b] = 1;
     }
-
+    // allows you to plant your crops
     static void plantCrop(int plotToPlantOn){
         if(Inventory.lTractor){
 
@@ -37,7 +37,7 @@ public class Plots {
             System.out.println( "You do not have any tractors to plant with!!" );
 
     }
-
+    //getting coordinates for the 2D array
     private static int getX(int input) {
         return (input-1)/3;
     }
@@ -55,6 +55,7 @@ public class Plots {
         }
         else
             System.out.println( "Crops not done!" );
+
     }
 
     public static void checkCrops() {
@@ -70,6 +71,7 @@ public class Plots {
         }
     }
 
+//sets the time of the crops
     public static long setTime(int t){
         return (System.currentTimeMillis()/1000) + t;
     }

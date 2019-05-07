@@ -4,6 +4,8 @@ public class Main {
 
 
     public static void main(String[] args) {
+        //Loads the save file as soon as the game starts
+
             SaveLoad.Load();
         boolean gameState = true;
 
@@ -11,6 +13,7 @@ public class Main {
         Scanner Sc = new Scanner( System.in );
         System.out.println( "Welcome to our farming game" );
         if(name.equals( "new" )){
+            //if it is a new game, it asks for your name.
             System.out.println( "Enter your name: " );
             name = Sc.nextLine();
 
@@ -19,6 +22,7 @@ public class Main {
             System.out.println( "Welcome back " + name );
             System.out.println( "Type commands to get started" );
         while (gameState) {
+            //main menu where players interact with the game by typing in commands
             userinput = Sc.nextLine();
             if (userinput.equalsIgnoreCase("commands")) {
                 System.out.println( "To buy your first tractor: *shop*" );

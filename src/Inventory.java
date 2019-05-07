@@ -10,7 +10,7 @@ public class Inventory {
        wallet = w;
 
     }
-
+    //this whole class just keeps track of what you have and how much of it you have.
     static void setWallet(int w) {
         wallet = w;
     }

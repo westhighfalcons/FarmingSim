@@ -6,7 +6,7 @@ import java.io.*;
 
 public class SaveLoad {
     public static void ResetSave(){
-
+        //This method resets the save data by overwriting the current data with starting data, causing the game to load the basics.
         try {
             PrintWriter write = new PrintWriter( "saveData.txt", StandardCharsets.UTF_8 );
             write.println("100");
@@ -81,6 +81,7 @@ public class SaveLoad {
     public static void Save(){
 
         try {
+            //this method takes all your current stats and inventory and saves it to a text file to be read the next time you start the game.
             PrintWriter write = new PrintWriter( "saveData.txt", StandardCharsets.UTF_8 );
             write.println( Inventory.getWallet() );
             write.println( Main.name );
