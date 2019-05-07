@@ -10,11 +10,10 @@ public class Main {
         String userinput;
         Scanner Sc = new Scanner( System.in );
         System.out.println( "Welcome to our farming game" );
-        System.out.println( "To get a list of commands, type *commands*" );
         if(name.equals( "new" )){
             System.out.println( "Enter your name: " );
             name = Sc.nextLine();
-            System.out.println( "Type commands to get started" );
+
         }
         else
             System.out.println( "Welcome back " + name );

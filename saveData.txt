@@ -1,6 +1,6 @@
-25
-Michael
+100
+new
 false
 false
-true
-true
+false
+false

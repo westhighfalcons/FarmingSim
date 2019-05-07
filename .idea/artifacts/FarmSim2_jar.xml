@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FarmSim2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FarmSim2_jar</output-path>
+    <root id="archive" name="FarmSim2.jar">
+      <element id="module-output" name="FarmSim2" />
+    </root>
+  </artifact>
+</component>
